@@ -12,5 +12,15 @@
   </head>
   <body>
   end
+  <%
+      if (session.getAttribute("shit1") != null) {
+          for (int i = 0; i < 4;i++){
+              out.println(session.getAttribute("shit"+i));
+              out.println(session.getAttribute("shit"+i+"a"));
+              session.removeAttribute("shit"+i);
+              session.removeAttribute("shit"+i+"a");
+          }
+      }
+  %>
   </body>
 </html>
