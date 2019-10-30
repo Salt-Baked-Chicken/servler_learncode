@@ -31,4 +31,13 @@
     <listener>
         <listener-class>t_listener.request的监听</listener-class>
     </listener>
+    <listener>
+        <listener-class>t_listener.ServletContext属性</listener-class>
+    </listener>
+    <listener>
+        <listener-class>t_listener.HttpSession属性</listener-class>
+    </listener>
+    <listener>
+        <listener-class>t_listener.ServletRequest属性</listener-class>
+    </listener>
 </web-app>

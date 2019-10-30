@@ -11,11 +11,14 @@ public class try_servlet extends HttpServlet {
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         HttpSession session = request.getSession();
-        session.invalidate();
+        session.setAttribute("shit","123");
         request.setAttribute("shit","Attribute is 123");
         System.out.println(request.getAttribute("shit"));
         request.setAttribute("shit","Attribute is not 123");
         System.out.println(request.getAttribute("shit"));
         request.removeAttribute("shit");
+        session.setAttribute("shit","abc");
+        session.removeAttribute("shit");
+        session.invalidate();
     }
 }
