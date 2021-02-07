@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <filter>
+        <filter-name>try_filter</filter-name>
+        <filter-class>t_filter.try_filter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>try_filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>t_listener.try_listner</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>try_servlet</servlet-name>
+        <servlet-class>t_servlet.try_servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>try_servlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>
